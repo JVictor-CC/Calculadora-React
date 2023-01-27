@@ -17,7 +17,7 @@ function App() {
 
   const operationsArray = ['+', '-', '*', '/', '%']
   const insertOperation = (operation) => {
-    if(inputNumber === '0' || (operationsArray.includes(inputNumber[inputNumber.length - 1]) /*&& operationsArray.includes(operation)*/)){
+    if(inputNumber === '0' || (operationsArray.includes(inputNumber[inputNumber.length - 1]))){
       return
     }else{
       insertNumber(operation)
@@ -52,33 +52,36 @@ function App() {
         <Input value={inputNumber}/>
         <Row>
           <Button label='AC' bgColor={'#bdb495'} onClick={()=>clear()}/>
-          <Button label='()' bgColor={'#bdb495'} onClick={()=>insertNumber('')}/>
+          <Button label='(' bgColor={'#bdb495'} onClick={()=>insertNumber('(')}/>
+          <Button label=')' bgColor={'#bdb495'} onClick={()=>insertNumber(')')}/>
           <Button label='%' bgColor={'#bdb495'} onClick={()=>insertNumber('/100')}/>
-          <Button label='÷' bgColor={'#ffb727'} onClick={() => insertOperation('/')}/>
         </Row>
         <Row>
           <Button label='9' onClick={()=>insertNumber('9')}/>
           <Button label='8' onClick={()=>insertNumber('8')}/>
           <Button label='7' onClick={()=>insertNumber('7')}/>
-          <Button label='x' bgColor={'#ffb727'} onClick={() => insertOperation('*')}/>
+          <Button label='÷' bgColor={'#ffb727'} onClick={() => insertOperation('/')}/>
         </Row>
         <Row>
           <Button label='6' onClick={()=>insertNumber('6')}/>
           <Button label='5' onClick={()=>insertNumber('5')}/>
           <Button label='4' onClick={()=>insertNumber('4')}/>
-          <Button label='-' bgColor={'#ffb727'} onClick={() => insertOperation('-')}/>
+          <Button label='x' bgColor={'#ffb727'} onClick={() => insertOperation('*')}/>
         </Row>
         <Row>
           <Button label='3' onClick={()=>insertNumber('3')}/>
           <Button label='2' onClick={()=>insertNumber('2')}/>
           <Button label='1' onClick={()=>insertNumber('1')}/>
-          <Button label='+' bgColor={'#ffb727'} onClick={() =>insertOperation('+')}/>
+          <Button label='-' bgColor={'#ffb727'} onClick={() => insertOperation('-')}/>
         </Row>
         <Row>
           <Button label='0' onClick={()=>insertNumber('0')}/>
-          <Button label=',' onClick={()=>insertNumber('')}/>
+          <Button label='.' onClick={()=>insertNumber('.')}/>
           <Button label='erase' onClick={erase}/>
-          <Button label='=' bgColor={'#ffb727'} onClick={calculate}/>
+          <Button label='+' bgColor={'#ffb727'} onClick={() =>insertOperation('+')}/>
+        </Row>
+        <Row>
+        <Button label='=' bgColor={'#B0AA96'} onClick={calculate}/>
         </Row>
         
       </Content>
