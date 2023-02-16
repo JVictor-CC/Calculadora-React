@@ -19,4 +19,13 @@ export const InputContainer = styled.div`
         padding: 0 15px;
         text-align: right;
     }
+
+    
+    @media screen and (max-width: 600px){
+        height: 200px;
+
+        input{
+            height: 90%;
+        }
+    }
 `

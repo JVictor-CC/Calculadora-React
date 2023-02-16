@@ -15,6 +15,14 @@ export const Content = styled.div`
     max-width: 600px;
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: 600px){
+        width: 100%;
+        height: 100vh;
+    }
 `
 
 export const Row = styled.div`
@@ -22,4 +30,5 @@ export const Row = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 12%;
  `

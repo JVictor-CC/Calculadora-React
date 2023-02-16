@@ -77,7 +77,7 @@ function App() {
         <Row>
           <Button label='0' onClick={()=>insertNumber('0')}/>
           <Button label='.' onClick={()=>insertNumber('.')}/>
-          <Button label='erase' onClick={erase}/>
+          <Button label='ers' onClick={erase}/>
           <Button label='+' bgColor={'#ffb727'} onClick={() =>insertOperation('+')}/>
         </Row>
         <Row>

@@ -17,4 +17,8 @@ export const ButtonContainer = styled.button`
     &:active{
         opacity: 1;
     }
+
+    @media screen and (max-width: 600px){
+        height: 100%;
+    }
 `
